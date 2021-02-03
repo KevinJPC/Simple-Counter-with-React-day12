@@ -9,7 +9,11 @@ import "bootstrap";
 import "../styles/index.scss";
 
 //import your own components
-import { Home } from "./component/home.js";
+import { Clock } from "./component/count.js";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+function tack() {
+	ReactDOM.render(<Clock />, document.querySelector("#app"));
+}
+
+setInterval(tack, 1000);
